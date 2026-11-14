@@ -58,7 +58,7 @@ public class Customer extends User{
   // menu
   public String menu(){
     System.out.println("\ncustomer menu");
-    System.out.println("_______________");
+    System.out.println("_______________\n");
     System.out.println("0) exit");
     System.out.println("1) manage checking account");
     System.out.println("2) manage savings account");
