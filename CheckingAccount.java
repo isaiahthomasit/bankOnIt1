@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class CheckingAccount implements HasMenu{
 
   private double balance;
-  private static Scanner input = new Scanner(System.in);
+  private static Scanner input = User.input;
 
   public CheckingAccount(){
     balance = 0.0;
@@ -22,11 +22,11 @@ public class CheckingAccount implements HasMenu{
   // menu
   public String menu(){
     System.out.println("\naccount menu");
-    System.out.println("_______________");
+    System.out.println("_______________\n");
     System.out.println("0) quit");
     System.out.println("1) check balance");
     System.out.println("2) make a deposit");
-    System.out.println("3) make a withdrawal");
+    System.out.println("3) make a withdrawal\n");
     System.out.print("please enter 0-3: ");
 
     return input.next();
@@ -70,7 +70,7 @@ public class CheckingAccount implements HasMenu{
   } // end setBalance
 
   public void checkBalance(){
-    System.out.println("checking balance...");
+    System.out.println("\nchecking balance...");
     System.out.println("current balance: " + getBalanceString());
   } // end checkBalance
 
@@ -79,23 +79,23 @@ public class CheckingAccount implements HasMenu{
   } // end getDouble
 
   public void makeDeposit(){
-    System.out.println("making a deposit...");
+    System.out.println("\nmaking a deposit...");
     System.out.print("how much you want to deposit? ");
 
     double amount = getDouble();
     balance += amount;
 
-    System.out.println("new balance: " + getBalanceString());
+    System.out.println("\nnew balance: " + getBalanceString());
   } // end makeDeposit
  
   public void makeWithdrawal(){
-    System.out.println("making a withdrawal...");
+    System.out.println("\nmaking a withdrawal...");
     System.out.print("how much you want to withdraw? ");
 
     double amount = getDouble();
     balance -= amount;
 
-    System.out.println("new balance: " + getBalanceString());
+    System.out.println("\nnew balance: " + getBalanceString());
   } // end makeWithdrawal
  
 } // end CheckingAccount
